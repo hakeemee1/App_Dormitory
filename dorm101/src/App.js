@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React from 'react'
+import { useEffect } from 'react';
 import './App.css';
 
 function App() {
+  function handleCallbackResponse(response) {
+    console.log("Encode JWT ID token: " + response.credential);
+  }
+
+  useEffect (() => {
+    /*global google */
+    google.accounts.id.initialize({
+      client_id : "350994420864-t176nkjqp4eoisgpkt9kfbpv016k5v70.apps.googleusercontent.com",
+      callback: handleCallbackResponse
+    });
+    google.accounts.id.renderButton(
+      document.getElementById("SignInDiv"),
+      {
+        theme : "outline", size : "large"
+      }
+    );
+  }, [])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div id = "SignInDiv">
+
+      </div>
     </div>
   );
 }
