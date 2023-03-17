@@ -31,8 +31,8 @@ function Oauth() {
   return (
     <div className="App p-10 pt-6 pl-20  ">
       <div id = "SignInDiv">
-      { Object.keys(user).length != 0 && 
-         <Navigate to="/dashboard" />
+      { Object.keys(user).length !== 0 && 
+         <Navigate to="/Home" />
       }
       </div>
     </div>
