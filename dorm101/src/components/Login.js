@@ -25,7 +25,7 @@ function Login() {
           <div className=" w-1/2 p-5">
             <img
               src="https://i.pinimg.com/564x/3d/f3/7c/3df37c2a1851bb565f0b6b742a3d30c8.jpg"
-              alt="dormimg"
+              alt="genderimg"
               className=" rounded-xl"
             ></img>
           </div>
