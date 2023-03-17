@@ -29,10 +29,10 @@ function Oauth() {
     );
   }, [])
   return (
-    <div className="App p-10 pt-6 pl-20  ">
+    <div className="App p-10 pt-6 pl-20 ">
       <div id = "SignInDiv">
       { Object.keys(user).length !== 0 && 
-         <Navigate to="/Home" />
+         <Navigate to="/home" />
       }
       </div>
     </div>
