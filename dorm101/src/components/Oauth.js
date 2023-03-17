@@ -1,10 +1,18 @@
 import React from 'react'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
+import { Navigate } from 'react-router-dom'
+import jwt_decode from "jwt-decode"
 
-function App() {
+function Oauth() {
+
+  const [ user, setUser ] = useState({});
+
   function handleCallbackResponse(response) {
     console.log("Encode JWT ID token: " + response.credential);
+    var useObject = jwt_decode(response.credential);
+    console.log(useObject);
+    setUser(useObject);
   }
 
   useEffect (() => {
@@ -23,10 +31,12 @@ function App() {
   return (
     <div className="App p-10 pt-6 pl-20  ">
       <div id = "SignInDiv">
-
+      { Object.keys(user).length != 0 && 
+         <Navigate to="/dashboard" />
+      }
       </div>
     </div>
   );
 }
 
-export default App;
+export default Oauth;
