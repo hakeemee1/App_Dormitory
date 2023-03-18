@@ -5,7 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 const EditUser = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [gender, setGender] = useState("Male");
+  const [gender, setGender] = useState("1");
   const navigate = useNavigate();
   const { id } = useParams();
 
@@ -21,7 +21,7 @@ const EditUser = () => {
         email,
         gender,
       });
-      navigate("/");
+      navigate("/home");
     } catch (error) {
       console.log(error);
     }
@@ -35,11 +35,11 @@ const EditUser = () => {
   };
 
   return (
-    <div className="columns mt-5 is-centered">
-      <div className="column is-half">
+    <div className="p-5 h-screen  bg-gray-100">
+      <div className="p-5 h-screen  bg-gray-300 rounded-3xl">
         <form onSubmit={updateUser}>
           <div className="field">
-            <label className="label">ชื่อ-สกุล</label>
+            <label className="label font-semibold">ชื่อ-สกุล</label>
             <div className="control">
               <input
                 type="text"
@@ -51,7 +51,7 @@ const EditUser = () => {
             </div>
           </div>
           <div className="field">
-            <label className="label">รายละเอียดเเจ้งซ่อม</label>
+            <label className="label font-semibold">รายละเอียดเเจ้งซ่อม</label>
             <div className="control">
               <input
                 type="text"
@@ -63,7 +63,7 @@ const EditUser = () => {
             </div>
           </div>
           <div className="field">
-            <label className="label">หอพัก</label>
+            <label className="label font-semibold">หอพัก</label>
             <div className="control">
               <div className="select is-fullwidth">
                 <select
@@ -79,7 +79,7 @@ const EditUser = () => {
             </div>
           </div>
           <div className="field">
-            <button type="submit" className="button is-success">
+            <button type="submit" className=" bg-green-600 px-3 py-1 mt-3 text-white hover:bg-green-800 font-bold  rounded-xl">
               Update
             </button>
           </div>

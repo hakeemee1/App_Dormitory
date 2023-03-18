@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const AddUser = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [gender, setGender] = useState("Male");
+  const [gender, setGender] = useState("1");
   const navigate = useNavigate();
 
   const saveUser = async (e) => {
@@ -23,13 +23,14 @@ const AddUser = () => {
   };
 
   return (
-    <div className="columns mt-5 is-centered">
-      <div className="column is-half">
+    <div className="p-5 h-screen  bg-gray-100">
+      <div className="p-5 h-screen  bg-gray-300 rounded-3xl">
         <form onSubmit={saveUser}>
           <div className="field">
-            <label className="label">ชื่อ-สกุล</label>
+            <label className="label font-semibold m-auto">ชื่อ-สกุล</label>
             <div className="control">
               <input
+                required
                 type="text"
                 className="input"
                 value={name}
@@ -39,9 +40,10 @@ const AddUser = () => {
             </div>
           </div>
           <div className="field">
-            <label className="label">รายละเอียดเเจ้งซ่อม</label>
+            <label className="label font-semibold">รายละเอียดเเจ้งซ่อม</label>
             <div className="control">
               <input
+                required
                 type="text"
                 className="input"
                 value={email}
@@ -50,11 +52,12 @@ const AddUser = () => {
               />
             </div>
           </div>
-          <div className="field">
-            <label className="label">หอพัก</label>
+          <div className="field ">
+            <label className="label font-semibold">หอพัก</label>
             <div className="control">
               <div className="select is-fullwidth">
                 <select
+                  required
                   value={gender}
                   onChange={(e) => setGender(e.target.value)}
                 >
@@ -67,8 +70,8 @@ const AddUser = () => {
             </div>
           </div>
           <div className="field">
-            <button type="submit" className="button is-success" >
-              Save
+            <button type="submit" className=" bg-green-600 px-3 py-1 mt-3 text-white hover:bg-green-800 font-bold  rounded-xl">
+              บันทึกข้อมูล
             </button>
           </div>
         </form>

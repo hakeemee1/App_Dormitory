@@ -24,13 +24,13 @@ const UserList = () => {
   };
 
   return (
-    <div className="p-5 h-screen  bg-gray-100">
+    <div className="p-5 h-screen  bg-gray-100 ">
       <div className=" mt-5">
         <Link to={`add`} className=" bg-blue-600 text-white p-3 ml-3 rounded-full shadow-sm hover:bg-green-500 ">
           เเจ้งซ่อม
         </Link>
         <table className=" w-3/4 content-center mt-10">
-          <thead className=" bg-gray-400 border-gray-200">
+          <thead className=" bg-red border-gray-400 rounded-xl">
             <tr>
               <th className=" p-3 text-sm bg-gray-100 border-b-2 border-gray-200 font-semibold tracking-wide text-left ">ลำดับ</th>
               <th className=" p-3 text-sm bg-gray-100 border-b-2 border-gray-200 font-semibold tracking-wide text-left ">ชื่อ-สกุล</th>
@@ -43,7 +43,7 @@ const UserList = () => {
           </thead>
           <tbody>
             {users.map((user, index) => (
-              <tr key={user.id} className=" bg-gray-300">
+              <tr key={user.id} className=" bg-gray-300 rounded-md">
                 <td className=" p-3 text-sm text-gray-700">{index + 1}</td>
                 <td className=" p-3 text-sm text-gray-700">{user.name}</td>
                 <td className=" p-3 text-sm text-gray-700">{user.email}</td>
