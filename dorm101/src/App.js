@@ -5,6 +5,8 @@ import AddUser from "./components/AddUser";
 import UserList from "./components/UserList"
 import EditUser from "./components/EditUser"
 import Navbar from "./components/Navbar"
+import Home from "./components/Home";
+import Team from "./components/Team";
 
 function App() {
   return (
@@ -12,11 +14,12 @@ function App() {
       <Navbar />
       <BrowserRouter>
       <Routes>
-        <Route path="/home/add" element={<AddUser/>}/>
-        <Route path="/home" element={<UserList/>}/>
-        <Route path="/home" element={<UserList/>}/>
+        <Route path="/myteam" element={ <Team />}/>
+        <Route path="/list/add" element={<AddUser/>}/>
+        <Route path="/home" element={<Home/>}/>
+        <Route path="/list" element={<UserList/>}/>
         <Route path="add" element={<AddUser/>}/>
-        <Route path="/home/edit/:id" element={<EditUser/>}/>
+        <Route path="/list/edit/:id" element={<EditUser/>}/>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         

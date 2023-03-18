@@ -16,7 +16,7 @@ const AddUser = () => {
         email,
         gender,
       });
-      navigate("/home");
+      navigate("/list");
     } catch (error) {
       console.log(error);
     }
@@ -27,7 +27,7 @@ const AddUser = () => {
       <div className="p-5 h-screen  bg-gray-300 rounded-3xl">
         <form onSubmit={saveUser}>
           <div className="field">
-            <label className="label font-semibold m-auto">ชื่อ-สกุล</label>
+            <label className="label font-semibold ">ชื่อ-สกุล</label>
             <div className="control">
               <input
                 required

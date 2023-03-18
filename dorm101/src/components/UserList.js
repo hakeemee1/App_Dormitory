@@ -35,7 +35,7 @@ const UserList = () => {
             เเจ้งซ่อม
           </Link>
           <table className=" w-3/4 content-center mt-10">
-            <thead className=" bg-red border-gray-400 rounded-xl">
+            <thead className=" bg-red border-white bg-white rounded-xl">
               <tr>
                 <th className=" p-3 text-sm bg-gray-100 border-b-2 border-gray-200 font-semibold tracking-wide text-left ">
                   ลำดับ

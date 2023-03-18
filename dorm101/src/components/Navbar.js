@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import {
   Navbar,
   MobileNav,
@@ -25,7 +27,7 @@ export default function Example() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/home" className="flex items-center">
+        <a href="/list" className="flex items-center">
           ลิสต์แจ้งซ่อม
         </a>
       </Typography>
@@ -35,8 +37,18 @@ export default function Example() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/home/add" className="flex items-center">
+        <a href="/list/add" className="flex items-center">
           แจ้งซ่อม
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className=" font-normal bg-blue-400 rounded-md p-2 hover:bg-red-500"
+      >
+        <a href="/myteam" className="flex items-center">
+          DEV TEAM
         </a>
       </Typography>
     </ul>
@@ -56,57 +68,11 @@ export default function Example() {
         <div className="hidden lg:block">{navList}</div>
         <div>
           {/* Edit route plz */}
-        <Button variant="gradient" size="sm" className="hidden lg:inline-block " href="/teamdev">
-          <span>Team Dev</span>
-        </Button>
         </div>
-        <IconButton
-          variant="text"
-          className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
-          ripple={false}
-          onClick={() => setOpenNav(!openNav)}
-        >
-          {openNav ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              className="h-6 w-6"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          )}
-        </IconButton>
       </div>
-      <MobileNav open={openNav}>
-        <div className="container mx-auto">
-          {navList}
-          {/* Edit router to Team dev plz */}
-          <Button variant="gradient" size="sm" fullWidth className="mb-2">
-            <span>Team Dev</span>
-          </Button>
-        </div>
-      </MobileNav>
+      {/* ___________________________________ */}
+      
+
     </Navbar>
   );
 }
