@@ -15,9 +15,9 @@ function Login() {
               ยินดีต้อรับเข้าสู่ App Dormitory สำหรับการเเจ้งซ่อมเเละข้อมูลต่างๆ
             </p>
             <div className=" mt-10 grid grid-cols-3 items-center text-gray-400">
-              <hr className=" border-gray-400 ml-10" />
-              <p className=" text-center">Login with Google Oauth</p>
-              <hr className=" border-gray-400 mr-10" />
+              <hr className=" border-black ml-10" />
+              <p className=" text-center text-black font-thin mx-3">Login with Google Oauth</p>
+              <hr className=" border-black mr-10" />
             </div>
             <Oauth />
           </div>
