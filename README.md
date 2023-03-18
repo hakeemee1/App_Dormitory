@@ -43,4 +43,17 @@
 
 ![image](https://user-images.githubusercontent.com/102495740/226120585-3b41c410-f214-483c-8d55-eaba3ccab628.png)
 
+📄 หน้าสาม หน้าแสดงรายการ การแจ้งซ่อม
+
+![image](https://user-images.githubusercontent.com/102495740/226121189-e161ab14-5293-427d-86fb-54de450ee7e5.png)
+
+📄 หน้าสี่ หน้าแจ้งซ่อม
+
+![image](https://user-images.githubusercontent.com/102495740/226121267-c9e592bc-3ba4-4208-8bea-7c8a65ea93af.png)
+
+📄 หน้าห้า หน้าแสดงสมาชิกในทีม
+
+![image](https://user-images.githubusercontent.com/102495740/226121300-915fc037-8664-430b-8b58-a36deb605f3e.png)
+
+
 
