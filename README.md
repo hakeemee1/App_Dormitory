@@ -12,6 +12,8 @@
 >> หน้าที่ Front-End Developer and Project Maneger  
 
 **รายละเอียดโปรเจค**  
+VIDEO DEMO => https://youtu.be/l4S1cB913qY
+
 > :star: เป็น Web Application ที่ใช้สำหรับการแจ้งซ่อมครุภัณฑ์ของหอพัก  
   :star: ผู้ใช้ต้องมีการยืนยันตัวตนด้วย Google OAuth เพื่อเข้าไปยังหน้าแจ้งซ่อม  
   :star: ผู้ใช้สามารถ สร้าง อ่าน แก้ไขและลบ รายละเอียดการแจ้งซ่อมได้ 
