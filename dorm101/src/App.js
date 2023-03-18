@@ -4,10 +4,13 @@ import Login from "./components/Login"
 import AddUser from "./components/AddUser";
 import UserList from "./components/UserList"
 import EditUser from "./components/EditUser"
+import Navbar from "./components/Navbar"
 
 function App() {
   return (
-    <BrowserRouter>
+    <div>
+      <Navbar />
+      <BrowserRouter>
       <Routes>
         <Route path="/home/add" element={<AddUser/>}/>
         <Route path="/home" element={<UserList/>}/>
@@ -19,7 +22,7 @@ function App() {
         
       </Routes>
     </BrowserRouter>
-   
+    </div>
   );
 }
 
